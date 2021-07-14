@@ -14,7 +14,6 @@ Além disso temos o notebook explicando o passo a passo e teoria utilizada para 
 
 ### Rotas
 
-Todas as rotas são acessível por botões na página.
 
 ```/usuario:``` (botão "Usuário") Cria um usuário com o nome inserido, caso o usuário já exista no sistema, ele é detectado. 
 
