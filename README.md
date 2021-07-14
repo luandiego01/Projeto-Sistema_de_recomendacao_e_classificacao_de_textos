@@ -29,3 +29,5 @@ Todas as rotas são acessível por botões na página.
 ```/predict:``` (botão "Classificar") Classifica o texto inserido pelo usuário como sendo um texto sobre esportes, tecnologia ou politica.
 
 ```/tabela:``` (botão "Visualizar tabela Usuário-Item") Visualiza a tabela de usuários com a suas respectivas notas dadas aos textos que foram lidos.
+
+```/model_health/<model_id>```: Metricas do modelo. Rand Score e Adjusted Rand Score disponíveis.
