@@ -31,4 +31,4 @@ Além disso temos o notebook explicando o passo a passo e teoria utilizada para 
 
 ```/tabela:``` (botão "Visualizar tabela Usuário-Item") Visualiza a tabela de usuários com a suas respectivas notas dadas aos textos que foram lidos.
 
-```/model_health/<model_id>```: Metricas do modelo. Rand Score e Adjusted Rand Score disponíveis.
+```/model_health```: Metricas do modelo. Rand Score e Adjusted Rand Score disponíveis.
