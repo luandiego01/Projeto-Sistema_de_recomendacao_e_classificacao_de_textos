@@ -1,0 +1,49 @@
+<h2 style="text-align: center;" ><strong><font face="Calibri"> <b>Sistema de Recomendação e classificação de textos</font></strong></h2>
+<h1 style="text-align: center;"><font face="Calibri"> <u>Recomendação</u></font></h1>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<h1 style="text-align: center;"><span style="color: #0000ff;"></span></h1>
+
+<div class="login">
+
+<a href="https://github.com/luandiego01/Projeto2-Sistema_de_recomendacao_e_classificacao_de_textos" download><h1 style="text-align: left;"><input type="button" value="README"></h1></a>
+
+<a href="{{url_for('model_health')}}"><h1 style="text-align: left;"><input type="button" value="MÉTRICAS"></h1></a>
+
+    
+<form action="{{url_for('recomen')}}" method='POST'>
+<h1 style="text-align: center;"><input type="text" , name ="x1" placeholder = "Digite o nome de usuário", style="width: 300px; height: 30px;" /></h1>
+
+<h1 style="text-align: center;"><button type= "submit" class= "btn btn-primary btn-block btn-large">Usuário</button></h1>
+</form>
+
+<form action="{{url_for('recomen1')}}" method='POST'>
+<h1 style="text-align: center;"><input type="text" , name ="x1" placeholder = "Tema(Sports, Technology ou Politics)" required="required", style="width: 300px; height: 30px;" /></h1>
+
+<h1 style="text-align: center;"><button type= "submit" class= "btn btn-primary btn-block btn-large">Buscar texto</button></h1>
+</form>
+
+
+
+<p style="text-align: center;">&nbsp;</p>   
+
+ 
+.<h3 style="text-align: center;">{{boasvindas}}</h3>
+
+<h2 style="text-align: center;"><strong>{{texto}}</strong></h2>  
+
+.<h2 style="text-align: center;"><strong>{{pred}}</strong> 
+
+<h2 style="text-align: center;"><strong>{{ava}}</strong> 
+
+
+<form action="{{url_for('avali')}}" method='POST'>
+<h1 style="text-align: center;"><input type="text" , name ="x1" placeholder = "Avalie o texto com uma nota entre 0 e 5" required="required", style="width: 300px; height: 30px;" /></h1>
+
+<h1 style="text-align: center;"><button type= "submit" class= "btn btn-primary btn-block btn-large">Avaliar</button></h1>
+</form>
+
+<a href="{{url_for('classifi')}}"><h1 style="text-align: center;"><input type="button" value="Classificação"></h1></a>
+
+<a href="{{url_for('tabela')}}"><h1 style="text-align: center;"><input type="button" value="Visualizar tabela Usuário-Item"></h1></a>
+
