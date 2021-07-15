@@ -1,8 +1,10 @@
 # Sistema de Recomendação e Classificação de Textos - API
+### Projeto concluido
 
 Nesse API podemos fazer duas coisas:
 
 1 - Recomendar textos baseado em três categorias. (Sports, Technology, Politics)
+
 2 - Classificar textos também de acordo com as mesmas três categorias.
 
 Vamos observar que tanto o dataset, quanto os textos que foram usados para esse API são pequenos, a ideia principal é analisar a possibilidade que temos para trabalhar com um sistema de recomendação e classificação de textos.
