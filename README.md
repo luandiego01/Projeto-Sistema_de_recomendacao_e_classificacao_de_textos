@@ -1,6 +1,8 @@
 # Sistema de Recomendação e Classificação de Textos - API
 ### Projeto concluido
 
+link para API: https://sistema-recomendacao-textos.herokuapp.com/
+
 Nesse API podemos fazer duas coisas:
 
 1 - Recomendar textos baseado em três categorias. (Sports, Technology, Politics)
