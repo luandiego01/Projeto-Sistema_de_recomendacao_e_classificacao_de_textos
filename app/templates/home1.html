@@ -1,24 +1,29 @@
-<h2 style="text-align: center;"><strong><font face="Calibri"> <b>Sistema de Recomendação e classificação de textos</font></strong></h2>
-<h1 style="text-align: center;"><font face="Calibri"><u>Classificação</u></font></h1>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;">&nbsp;</p>
-<h1 style="text-align: center;"><span style="color: #0000ff;"></span></h1>
 
-<div class="login",>
+{% extends "base.html" %}
 
+{% block content %}
+<div class="titulo">
+  <head>
+    <h1 style="text-align: center;"><strong><b>Sistema de Recomendação e classificação de textos</strong></h1>
+    <h2 style="text-align: center;"><font face="Calibri"><u>Classificação</u></font></h2>
+    <p style="text-align: center;">&nbsp;</p>
+    <p style="text-align: center;">&nbsp;</p>
+    <h1 style="text-align: center;"><span style="color: #0000ff;"></span></h1>
+  </head> 
+</div>
 
-    
 <form action="{{url_for('predict')}}" method='POST'>
-<h1 style="text-align: center;"><input type="text" , name ="x1" placeholder = "Digite seu texto aqui" , style="width: 600px; height: 30px;" /></h1>
-<h1 style="text-align: center;"><button type= "submit" class= "btn btn-primary btn-block btn-large">Classificar</button></h1>
+  <h1 style="text-align: center;"><input type="text" , name ="x1" placeholder = "Digite seu texto aqui" , style="width: 600px; height: 30px;" /></h1>
+  <h1 style="text-align: center;"><button type= "submit" class= "btn btn-primary btn-block btn-large">Classificar</button></h1>
 </form>
 
   
 <p style="text-align: center;">&nbsp;</p>
 
+<p style="text-align: center;">&nbsp;</p>
 
-.<h3 style="text-align: center;">{{texto}}</h3>
 
-.<h2 style="text-align: center;">{{pred}}<span style="color: #0000ff;"></span></h2>
+<h3 style="text-align: center;">{{texto}}</h3>
 
-<a href="{{url_for('home')}}"><h1 style="text-align: center;"><input type="button" value="Sistema de Recomendação"></h1></a>
+<h2 style="text-align: center;">{{pred}}<span style="color: #0000ff;"></span></h2>
+{% endblock %}

@@ -6,22 +6,23 @@ import SistemaRecomen
 app = Flask(__name__, template_folder = 'templates')
 
 @app.route("/")
+@app.route("/index")
 def home():
-     return render_template("home.html")
+     return render_template("home.html", title = "Sistema de Recomendação")
 
 @app.route('/usuario', methods = ['POST'])
 def recomen():
     features = [x for x in request.form.values()]
     user = SistemaRecomen.Sistema1.usuario(features[0])
     print(user)
-    return render_template("home.html", texto = user)
+    return render_template("home.html", title = "Sistema de recomendação", texto = user)
 
 @app.route('/recomen', methods = ['POST'])
 def recomen1():
     features1 = [x for x in request.form.values()]
     user1 = SistemaRecomen.Sistema1.recomendacao(features1[0])
     
-    return render_template("home.html", boasvindas = "Olá " + SistemaRecomen.Sistema1.user +  
+    return render_template("home.html", title = "Sistema de Recomendação", boasvindas = "Olá " + SistemaRecomen.Sistema1.user +  
                                 "! Sugerimos a leitura do artigo: ", texto = user1[0], pred = user1[1])
 
 @app.route('/avali', methods = ['POST'])
@@ -29,7 +30,7 @@ def avali():
     features1 = [x for x in request.form.values()]
     user2 = SistemaRecomen.Sistema1.avaliacao((features1[0]), SistemaRecomen.Sistema1.indice[1],  SistemaRecomen.Sistema1.indice[0])
     
-    return render_template("home.html", ava = user2)
+    return render_template("home.html", title = "Avaliação", ava = user2)
 
 
 @app.route('/tabela')
@@ -40,14 +41,14 @@ def tabela():
 
 @app.route('/classifi')
 def classifi():
-     return render_template("home1.html")
+     return render_template("home1.html", title = "Classificação")
 
 @app.route('/predict', methods = ['POST'])
 def predict():
     features = [x for x in request.form.values()]
     pred = SistemaRecomen.classifi(features[0])
     print(pred)
-    return render_template("home1.html", texto = features[0], pred =  "Classificação: {}".format(pred))
+    return render_template("home1.html", title = "Classificação", texto = features[0], pred =  "Classificação: {}".format(pred))
 
 @app.route('/model_health')
 def model_health():

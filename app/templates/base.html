@@ -1,0 +1,77 @@
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+  .red-text {
+    color: red;
+  }
+  h1 {
+    font-family: Lobster, monospace;
+    font-size: 30px;
+  }
+  h4 {
+    font-family: monospace;
+  }
+  p {
+    font-size: 16px;
+    font-family: monospace;
+  }
+  .silver-background {
+    background-color: rgba(55,55,55,0.2);
+    padding: 10px;
+    width: 100%;
+  }
+  .titulo {
+    padding: 10px;
+    width: 100%;
+  }
+  body {
+    background: linear-gradient(35deg,#CCFFFF, #FFCCCC);
+  }
+  #navbar{
+  	position: fixed;
+  	top:  0;
+  	width: 100%;
+  }
+  nav ul {
+    margin: 0px;
+    padding: 5px 0px 0px 30px;
+  }
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  .links{
+  	margin-right: 20px;
+  }
+  #left {
+    float: left;
+    width: 40%;
+    text-align: justify;
+    font:  'Calibri';
+  }
+  #right {
+    float: right;
+    width: 57.6%;
+  }
+  aside, section {
+    padding: 2px;
+    }
+  li {
+  	font-family: monospace;
+  }
+</style>
+
+<title>{{title}}</title>
+<html>
+	<div>
+	<nav id="navbar">
+		<ul>
+			<li><a href="{{url_for('classifi')}}">Classificação</a></li>
+			<li><a href="{{url_for('home')}}">Sistema de Recomendação</a></li>
+			<li><a href="https://github.com/luandiego01/Projeto2-Sistema_de_recomendacao_e_classificacao_de_textos">Readme</a></li>
+			<li><a href="{{url_for('model_health')}}">Métricas</a></li>
+		</ul>
+		<hr>
+	</nav>
+		{% block content %}{% endblock %}
+	</div>
+</html>
