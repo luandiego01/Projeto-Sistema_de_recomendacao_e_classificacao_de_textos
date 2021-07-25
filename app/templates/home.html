@@ -3,8 +3,8 @@
 
 {% block content %}
 <div class="titulo">
-  <head class="titulo">
-    <h1 style="text-align: center;" ><strong><b>Sistema de Recomendação e classificação de textos</b></strong></h1>
+  <head>
+    <h1><strong><b id="shadow">Sistema de Recomendação e classificação de textos</b></strong></h1>
     <h2 style="text-align: center;"><font face="Calibri"><b> <u>Recomendação</u></b></font></h2>
     <p style="text-align: center;">&nbsp;</p>
     <p style="text-align: center;">&nbsp;</p>
@@ -23,19 +23,17 @@
   <h1 style="text-align: center;"><button type= "submit" class= "btn btn-primary btn-block btn-large">Buscar texto</button></h1>
 </form>
 
-
-
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;">&nbsp;</p>
-
 <h3 style="text-align: center;">{{boasvindas}}</h3>
 <h2 style="text-align: center;"><strong>{{texto}}</strong></h2>  
 <h2 style="text-align: center;"><strong>{{pred}}</strong></h2> 
 <h2 style="text-align: center;"><strong>{{ava}}</strong></h2>
+
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+
+
 
 <form action="{{url_for('avali')}}" method='POST'>
   <h1 style="text-align: center;"><input type="text" , name ="x1" placeholder = "Avalie o texto com uma nota entre 0 e 5" required="required", style="width: 300px; height: 30px;" /></h1>
